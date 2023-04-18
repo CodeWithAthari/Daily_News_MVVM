@@ -2,7 +2,6 @@ package com.devatrii.dailynews.Adapters
 
 import android.content.Context
 import android.content.Intent
-import android.text.Html
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -42,7 +41,7 @@ class MainAdapter(var list: ArrayList<ArticleModel>, var context: Context) :
         fun bind(model: ArticleModel, context: Context) {
             binding.apply {
                 rvPostTitle.setHtmlAsText(model.title)
-                rvAuthor.text = model.author
+                rvAuthor.text = model.author_name
                 rvReadTime.text = "• ${model.reading_time.split(" ")[0]}m Read"
                 loadImageWithGlide(model.image, rvImage, context)
                 mCardViewPost.setOnClickListener {

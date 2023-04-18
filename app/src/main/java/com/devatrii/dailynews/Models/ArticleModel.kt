@@ -9,10 +9,10 @@ data class ArticleModel(
     val title: String, // yoast_head_json => title
     val content: String, // content => rendered
     val excerpt: String, // excerpt => rendered
-    val author: String, // yoast_head_json => author
-    val author_profile: String, // author[0] => href
+    val author_name: String, // yoast_head_json => author
+    val author_url: String, // author[0] => href
+    val author_pic: String, // author[0] => href
     val reading_time: String, // twitter_misc => Est. reading time"
-    val twitter_site: String, // twitter_site
     val link: String, // link
     val image: String, //og_image=>url
     val categories: Int, // categories
